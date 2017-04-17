@@ -25,11 +25,11 @@ class Calculator(object):
                 next_operation = item
             elif result is None:
                 result = item
-            elif next_operation == ADD:
-                result = result + item
+            elif next_operation == self.ADD:
+                result = self.add(result, item)
                 next_operation = None
-            elif next_operation == SUBTRACT:
-                result = result - item
+            elif next_operation == self.SUBTRACT:
+                result = self.subtract(result, item)
                 next_operation = None
 
         return result
